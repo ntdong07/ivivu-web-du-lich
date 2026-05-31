@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Dang_nhap/assets/style.css">
+    <link rel="stylesheet" href="/Dang_nhap/assets/icon/fonts-icon/themify-icons-font/themify-icons/themify-icons.css">
+    <title>IVIVU - Đồ án Web Du lịch</title>
+</head>
+<body>
+    <div id="main">
+        <!-- begin header -->
+        <div id="father-header">
+            <div id="header">
+                <div class="menu1">
+                    <ul class="nav">
+                        <li><a href="http://127.0.0.1:5500/Dang_nhap/index.html">
+                            <img class="img-logo" src="/header-chung/logo/logo-goc-ivv.svg" alt="Logo">
+                        </a></li>
+                        <li><a class="a" href="http://127.0.0.1:5500/KHACH_SAN/index.html">Khách sạn</a></li>
+                        <li><a class="a" href="http://127.0.0.1:5500/TOUR/index.html">Tours</a></li>
+                        <li><a class="a" href="http://127.0.0.1:5500/VE_MAYBAY/index.html">Vé máy bay</a></li>
+                        <li><a class="a" href="http://127.0.0.1:5500/VE_VUICHOI/index.html">Vé vui chơi</a></li>
+                        <li><a class="a" href="http://127.0.0.1:5500/VE_TAU/index.html">Vé tàu</a></li>
+                        <li>
+                            <i class="ti-more-alt"></i>
+                            <ul class="sub-nav">
+                                <li><a href="">Cẩm nang du lịch</a></li>
+                                <li><a href="">Bespoke</a></li>
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Hỏi đáp</a></li>
+                                <li><a href="">Hỗ trợ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu2">
+                    <div class="box-menu1">
+                        <i class="ti-user"></i>
+                        <strong class="tk">Tài khoản
+                            <!-- begin phần thêm -->
+                        <div class="account">
+                            <a class="now-dangky" href="http://127.0.0.1:5500/Dang_ky/index.html">
+                                <button class="btn-dangky">Đăng ký</button>
+                            </a>
+                            <p class="what">Quý khách đã có tài khoản?</p>
+                            <p><a class="now-dangnhap" href="http://127.0.0.1:5500/Dang_nhap/index.html">Đăng nhập ngay</a></p>
+                        </div>
+                        <!-- end phầm thêm -->
+                        </strong>
+                        <i class="ti-angle-down"></i>
+                        
+                    </div>
+                    <div class="box-menu2">
+                        <h2><i class="ti-mobile"></i> 1900 1870</h2>
+                        <p><i class="ti-time"></i> 7h30 <i class="ti-arrow-right"></i> 21h</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end header -->
+        <div id="content">
+            <div class="content-selection">
+                <!-- -- -->
+                <div class="content-title">
+                    <h4 class="dn">Đăng nhập</h4>
+                    <a href=""><i class="ti-arrow-left icon-left"></i></a>
+                </div>
+                <!-- - -->
+
+                <div class="content-thongtin">
+                    <label class="subtitle" for="tai-khoan">Email / Số điện thoại di động</label>
+                    <input id="tai-khoan" class="input-thongtin" type="text" >
+                </div>
+                <div class="content-thongtin">
+                    <label class="subtitle" for="mat-khau">Mật khẩu</label>
+                    <input id="mat-khau" class="input-thongtin" type="password" >
+                </div>
+                <!-- -- -->
+                <div class="content-suport">
+                    <a class="suport_link" href="">Quên mật khẩu?</a>
+                    <a class="suport_link" href="">Đăng nhập bằng OTP</a>
+                </div>
+                <button class="btn-dangnhap">Đăng nhập</button>
+                <div class="content-hr">
+                    <hr class="the-hr">
+                    <p class="min-title">Hoặc</p>
+                </div>
+                <div class="content-app">
+                    <div class="app-block">
+                        
+                        <p><i class="icon-app ti-facebook"></i> Facebook</p>
+                    </div>
+                    <div class="app-block">
+                        
+                        <p><i class="icon-app ti-google"></i> Google</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // 1. Tìm cái nút "Tài khoản" và cái hộp "Account"
+        const btnTaiKhoan = document.querySelector('.box-menu1');
+        const boxAccount = document.querySelector('.account');
+
+        // 2. Lắng nghe sự kiện click vào nút "Tài khoản"
+        btnTaiKhoan.addEventListener('click', function(event) {
+            // toggle: Nếu chưa có class 'show' thì thêm vào (hiện), nếu có rồi thì xóa đi (ẩn)
+            boxAccount.classList.toggle('show');
+        });
+
+        // 3. (Tính năng nâng cao) - Click vào bên trong hộp Account sẽ KHÔNG bị đóng
+        boxAccount.addEventListener('click', function(event) {
+            event.stopPropagation(); // Chặn sự kiện click lan ra ngoài
+        });
+
+        // 4. (Tính năng nâng cao) - Bấm ra khoảng trắng ngoài web thì tự động đóng hộp
+        document.addEventListener('click', function(event) {
+            if (!btnTaiKhoan.contains(event.target)) {
+                boxAccount.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

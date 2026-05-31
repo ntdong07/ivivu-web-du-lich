@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f7fa; /* Nền xám nhạt cho trang đăng ký */
+}
+:root {
+    --maunnen: #003C71;
+    --maudo: #e53935;
+    --mauvang: #ff8c00;
+    --mauxanh: #26bed6;
+    --mautitle: #3f3b3b;
+    --mausubtitle: #636466;
+    --maumo: rgba(0, 0, 0, .3);
+    --shadow: 0 0 8px #00000026;
+}
+.clear { clear: both; }
+
+/* ================= HEADER BẢN CHUẨN GỐC ================= */
+#father-header {
+    background-color: var(--maunnen);
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+#header {
+    height: 64px;
+    width: 1200px;
+    margin: auto;
+}
+#header .menu1 {
+    float: left;
+    display: inline-block;
+}
+ul.nav {
+    display: inline-block;
+    padding: 7px 0px;
+    margin: 0;
+    list-style: none;
+}
+.menu1 .nav > li {
+    position: relative;
+    display: inline-block; 
+    padding: 0 8px;
+}
+/* Trang đăng ký không cần gạch chân active menu nào, nhưng vẫn giữ class để đồng bộ */
+.menu1 .nav li:nth-child(2) .a {
+    /* Bỏ gạch chân mặc định ở trang này nếu muốn */
+}
+.menu1 li:hover .ti-more-alt,
+.menu1 li:hover .a { color: var(--mauxanh); }
+.menu1 li:active .a { color: var(--mauxanh); border-bottom: 3px solid var(--mauvang); }
+.menu1 li a { text-decoration: none; }
+.ti-more-alt, .menu1 li .a { padding: 20.5px 0; color: #fff; font-size: 20px; }
+.menu1 .img-logo { width: auto; height: 50px; vertical-align: middle; padding: 0 16px; }
+
+.menu1 .sub-nav {
+    display: none;
+    min-width: 200px;
+    position: absolute;
+    background-color: var(--maunnen);
+    left: -110px;
+    margin-top: 8px;
+    padding-top: 15px;
+    border-radius: 2px;
+}
+.menu1 .sub-nav li { list-style-type: none; }
+.menu1 .sub-nav li a { font-size: 20px; display: block; padding: 8px 12px; color: #fff; }
+.menu1 li:hover .sub-nav { display: block; }
+.menu1 .sub-nav li:hover a { color: var(--mauxanh); }
+
+#header .menu2 {
+    align-items: center;
+    float: right;
+    display: flex;
+    height: 64px;
+}
+.menu2 .box-menu1 {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*-----------------------------------begin account --------------------------------------------*/
+.tk{
+    position:relative;
+}
+
+.account{
+    box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+    justify-content: space-between;
+    padding:8px 12px;
+    display:flex;
+    flex-direction: column;
+    top: 38px;
+    left: -70px;
+    position:absolute;
+    width:220px;
+    height:120px;
+    background-color: #fff;
+    display:none; 
+}
+
+.account .btn-dangky{
+    width:100%;
+    cursor: pointer;
+    font-weight:600;
+    font-size:16px;
+    height:40px;
+    color:#fff;
+    background-color: var(--mauxanh);
+    border:none;
+    border-radius:4px;
+    
+}
+.account .btn-dangky:hover{
+
+    opacity: 0.8;
+}
+.account p{
+    font-weight:400;
+    font-size:14px;
+}
+.account .what{
+    color:#000;
+    float:left;
+}
+.account .now-dangnhap{
+    margin-right: 70px;
+    color: #2f80ed;
+    color:#2f80ed;
+    
+}
+
+.account.show {
+    display: flex;
+}
+/*---------------------------------------end   account --------------------------------------------*/
+.menu2 .box-menu2 { text-align: center; }
+.box-menu2 h2 { margin-bottom: 8px; color: var(--mauvang); font-size: 26px; }
+.box-menu2 p { color: #fff; font-size: 14px; }
+
+/* ================= CONTENT ĐĂNG KÝ ================= */
+.content-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 30px;
+    max-width: 450px; /* Rộng hơn 1 tí so với bản đăng nhập để form thoáng hơn */
+    width: 100%;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .3);
+}
+.content-title { position: relative; margin-bottom: 20px; }
+.content-title .dn { text-align: center; font-size: 24px; color: var(--maunnen); }
+.content-title .icon-left {
+    position: absolute; font-size: 19px; left: 0px; top: 4px; color: #858585; font-weight: 600;
+}
+.content-thongtin { display: flex; flex-direction: column; }
+.content-thongtin .subtitle { font-size: 14px; color: #3f3b3b; margin-bottom: 6px; }
+.content-thongtin .sao { color: var(--maudo); }
+
+.content-thongtin .input-thongtin {
+    padding: 14px 16px;
+    outline: none;
+    border: 1px solid #c8c9d0;
+    border-radius: 4px;
+    font-size: 15px;     
+}
+.content-thongtin .input-thongtin::placeholder { color: #aaa; }
+.content-thongtin .input-thongtin:focus {
+    border-color: #00d9fc !important;
+    box-shadow: 0 0 0 4px rgba(50, 193, 255, .15);
+}
+
+.btn-dangnhap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--mauvang);
+    font-weight: bold;
+    border: none;
+    padding: 14px 0; /* Sửa lại padding để nút tự tràn đều 100% box */
+    width: 100%;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-dangnhap:hover { background-color: rgb(14, 150, 16); } 
+
+.content-hr { position: relative; margin: 25px 0; }
+.content-hr .the-hr { border: 0; border-top: 1px solid #e0e0e0; }
+.content-hr .min-title {
+    top: -10px; position: absolute; left: 50%; transform: translateX(-50%);
+    font-size: 14px; color: #828282; padding: 0 15px; background-color: #fff;
+}
+
+.content-app { display: flex; justify-content: space-between; margin-bottom: 20px;}
+.app-block {
+    width: calc(50% - 8px); height: 45px; display: flex; justify-content: center; align-items: center;
+    border: 1px solid #bdbdbd; border-radius: 4px; cursor: pointer; color: #555; font-weight: bold; font-size: 15px;
+}
+.app-block:hover { background-color: #edfbff; border-color: #7cd0ff; }
+.app-block .ti-facebook { color: #2f80ed; font-size: 20px; margin-right: 8px;}
+.app-block .ti-google { color: #e53935; font-size: 20px; margin-right: 8px;}
+
+.terms-text {
+    font-size: 13px; color: #555; text-align: center; line-height: 1.5;
+}
+.terms-text a { color: #2f80ed; text-decoration: underline; }
