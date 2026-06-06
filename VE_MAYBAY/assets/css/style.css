@@ -756,3 +756,29 @@ img.img-topvn{
 }
 
 /* end footer */
+
+
+
+/* begin-god */
+#god-thongtin{
+    background-color: #686464;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    height:100px;
+    align-items: center;
+    justify-content: center;
+    
+}
+#god-thongtin .desc{
+    display: flex;
+    color:#fff;
+    justify-content: center;
+    gap:16px;
+}
+#god-thongtin .lop{
+    color:#fff;
+    display:flex;
+    justify-content: center;
+}
+/* end god */
