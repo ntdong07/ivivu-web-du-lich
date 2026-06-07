@@ -26,9 +26,9 @@
                             <ul class="sub-nav">
                                 
                                 <li><a href="http://127.0.0.1:5500/Small_navigation/nav1/index.html">Bespoke</a></li>
-                                <li><a href="">Giới thiệu</a></li>
-                                <li><a href="">Hỏi đáp</a></li>
-                                <li><a href="">Hỗ trợ</a></li>
+                                <li><a href="http://127.0.0.1:5500/Small_navigation/nav2/index.html">Giới thiệu</a></li>
+                                <li><a href="http://127.0.0.1:5500/Small_navigation/nav3/index.html">Hỏi đáp</a></li>
+                                <li><a href="http://127.0.0.1:5500/Small_navigation/nav4/index.html">Hỗ trợ</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -58,53 +58,102 @@
         </div>
         <div id="content">
             <div class="content-selection">
-                <div class="content-title">
-                    <h4 class="dn">Đăng ký</h4>
-                    <a href="http://127.0.0.1:5500/Dang_nhap/index.html"><i class="ti-arrow-left icon-left"></i></a>
-                </div>
+    <div class="content-title">
+        <h4 class="dn">Đăng ký</h4>
+        <a href="http://127.0.0.1:5500/Dang_nhap/index.html"><i class="ti-arrow-left icon-left"></i></a>
+    </div>
 
-                <div class="content-thongtin" style="margin-bottom: 15px;">
-                    <label class="subtitle" for="ho-ten">Họ tên <span class="sao">*</span></label>
-                    <input id="ho-ten" class="input-thongtin" type="text" placeholder="Ví dụ: Nguyen Van A">
-                </div>
+    <form id="form-dangky">
+        <div class="content-thongtin" style="margin-bottom: 15px;">
+            <label class="subtitle" for="ho-ten">Họ tên <span class="sao">*</span></label>
+            <input id="ho-ten" class="input-thongtin" required type="text" placeholder="Ví dụ: Nguyen Van A">
+        </div>
 
-                <div class="content-thongtin" style="margin-bottom: 15px;">
-                    <label class="subtitle" for="tai-khoan">Email / Số điện thoại di động <span class="sao">*</span></label>
-                    <input id="tai-khoan" class="input-thongtin" type="text" placeholder="Ví dụ: 0901234567 hoặc email@gmail.com">
-                </div>
+        <div class="content-thongtin" style="margin-bottom: 15px;">
+            <label class="subtitle" for="tai-khoan">Email / Số điện thoại di động <span class="sao">*</span></label>
+            <input id="tai-khoan" class="input-thongtin" required type="email" placeholder="Ví dụ: 0901234567 hoặc email@gmail.com">
+        </div>
 
-                <div class="content-thongtin" style="margin-bottom: 15px;">
-                    <label class="subtitle" for="mat-khau">Mật khẩu <span class="sao">*</span></label>
-                    <input id="mat-khau" class="input-thongtin" type="password">
-                </div>
+        <div class="content-thongtin" style="margin-bottom: 15px;">
+            <label class="subtitle" for="mat-khau">Mật khẩu <span class="sao">*</span></label>
+            <input id="mat-khau" class="input-thongtin" required type="password">
+        </div>
 
-                <div class="content-thongtin" style="margin-bottom: 20px;">
-                    <label class="subtitle" for="nhap-lai-mat-khau">Nhập lại mật khẩu <span class="sao">*</span></label>
-                    <input id="nhap-lai-mat-khau" class="input-thongtin" type="password">
-                </div>
+        <div class="content-thongtin" style="margin-bottom: 20px;">
+            <label class="subtitle" for="nhap-lai-mat-khau">Nhập lại mật khẩu <span class="sao">*</span></label>
+            <input id="nhap-lai-mat-khau" required class="input-thongtin" type="password">
+        </div>
 
-                <button class="btn-dangnhap">Đăng ký</button>
+        <input type="submit" id="btn" class="btn-dangnhap" value="Đăng ký">
+    </form>
 
-                <div class="content-hr">
-                    <hr class="the-hr">
-                    <p class="min-title">Hoặc</p>
-                </div>
-                
-                <div class="content-app">
-                    <div class="app-block">
-                        <p><i class="icon-app ti-facebook"></i> Facebook</p>
-                    </div>
-                    <div class="app-block">
-                        <p><i class="icon-app ti-google"></i> Google</p>
-                    </div>
-                </div>
-
-                <div class="terms-text">
-                    Bằng cách đăng ký, Quý khách đồng ý tất cả <a href="#">điều kiện & điều khoản</a> của iVIVU
-                </div>
-            </div>
+    <div class="content-hr">
+        <hr class="the-hr">
+        <p class="min-title">Hoặc</p>
+    </div>
+    
+    <div class="content-app">
+        <div class="app-block">
+            <p><i class="icon-app ti-facebook"></i> Facebook</p>
+        </div>
+        <div class="app-block">
+            <p><i class="icon-app ti-google"></i> Google</p>
         </div>
     </div>
+
+    <div class="terms-text">
+        Bằng cách đăng ký, Quý khách đồng ý tất cả <a href="#">điều kiện & điều khoản</a> của iVIVU
+    </div>
+</div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+    const formDangKy = document.getElementById('form-dangky');
+
+    formDangKy.addEventListener('submit', function(event) {
+        const hoTen = document.getElementById('ho-ten').value.trim();
+        const matKhau = document.getElementById('mat-khau').value;
+        const nhapLaiMatKhau = document.getElementById('nhap-lai-mat-khau').value;
+
+        // 1. Kiểm tra Họ tên: Loại bỏ trường hợp chỉ nhập khoảng trắng
+        if (hoTen === "") {
+            alert("Vui lòng nhập họ tên hợp lệ!");
+            event.preventDefault();
+            return;
+        }
+
+        // 2. Kiểm tra độ dài mật khẩu
+        if (matKhau.length < 6) {
+            alert("Mật khẩu phải có ít nhất 6 ký tự!");
+            event.preventDefault();
+            return;
+        }
+
+        // 3. Kiểm tra mật khẩu khớp nhau
+        if (matKhau !== nhapLaiMatKhau) {
+            alert("Mật khẩu xác nhận không khớp!");
+            // Xóa sạch ô nhập lại mật khẩu để người dùng gõ lại
+            document.getElementById('nhap-lai-mat-khau').value = "";
+            event.preventDefault();
+            return;
+        }
+
+        alert("Đăng ký thành công!");
+    });
+</script>
+
+
+
+
+
+
+
 
     <script>
         // JS Xử lý cái menu Tài khoản thả xuống

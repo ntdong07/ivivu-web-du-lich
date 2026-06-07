@@ -292,6 +292,7 @@ ul.nav{
     flex-direction: column;
 }
 .content-thongtin .subtitle{
+    margin-top: 10px;
     font-size: 16px;
     color: #3f3b3b;
     margin-bottom: 6px;
@@ -307,6 +308,7 @@ ul.nav{
     box-shadow: 0 0 0 4px rgba(50, 193, 255, .15);
 }
 .content-suport{
+    margin-top: 40px;
     display:flex;
     justify-content: space-between;
 }
@@ -315,6 +317,7 @@ ul.nav{
     color:#337ab7;
 }
 .btn-dangnhap{
+    margin-top: 20px;
     display:flex;
     font-size:20px;
     color:#fff;

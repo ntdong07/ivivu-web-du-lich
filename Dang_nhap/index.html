@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Dang_nhap/assets/style.css">
     <link rel="stylesheet" href="/Dang_nhap/assets/icon/fonts-icon/themify-icons-font/themify-icons/themify-icons.css">
-    <title>IVIVU - Đồ án Web Du lịch</title>
+    <title>IVIVU - Đăng nhập</title>
 </head>
 <body>
     <div id="main">
@@ -27,9 +27,9 @@
                             <ul class="sub-nav">
                                
                                 <li><a href="http://127.0.0.1:5500/Small_navigation/nav1/index.html">Bespoke</a></li>
-                                <li><a href="">Giới thiệu</a></li>
-                                <li><a href="">Hỏi đáp</a></li>
-                                <li><a href="">Hỗ trợ</a></li>
+                                <li><a href="http://127.0.0.1:5500/Small_navigation/nav2/index.html">Giới thiệu</a></li>
+                                <li><a href="http://127.0.0.1:5500/Small_navigation/nav3/index.html">Hỏi đáp</a></li>
+                                <li><a href="http://127.0.0.1:5500/Small_navigation/nav4/index.html">Hỗ trợ</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -48,6 +48,7 @@
                             <p><a class="now-dangnhap" href="http://127.0.0.1:5500/Dang_nhap/index.html">Đăng nhập ngay</a></p>
                         </div>
                         <!-- end phầm thêm -->
+                         
                         </strong>
                         <i class="ti-angle-down"></i>
                         
@@ -60,47 +61,53 @@
                 </div>
             </div>
         </div>
-        <!-- end header -->
-        <div id="content">
-            <div class="content-selection">
-                <!-- -- -->
-                <div class="content-title">
-                    <h4 class="dn">Đăng nhập</h4>
-                    <a href=""><i class="ti-arrow-left icon-left"></i></a>
-                </div>
-                <!-- - -->
+     <!-- end header -->
 
-                <div class="content-thongtin">
-                    <label class="subtitle" for="tai-khoan">Email / Số điện thoại di động</label>
-                    <input id="tai-khoan" class="input-thongtin" type="text" >
-                </div>
-                <div class="content-thongtin">
-                    <label class="subtitle" for="mat-khau">Mật khẩu</label>
-                    <input id="mat-khau" class="input-thongtin" type="password" >
-                </div>
-                <!-- -- -->
-                <div class="content-suport">
-                    <a class="suport_link" href="">Quên mật khẩu?</a>
-                    <a class="suport_link" href="">Đăng nhập bằng OTP</a>
-                </div>
-                <button class="btn-dangnhap">Đăng nhập</button>
-                <div class="content-hr">
-                    <hr class="the-hr">
-                    <p class="min-title">Hoặc</p>
-                </div>
-                <div class="content-app">
-                    <div class="app-block">
-                        
-                        <p><i class="icon-app ti-facebook"></i> Facebook</p>
+
+        <!-- begin content -->
+            <div id="content">
+                <div class="content-selection">
+                    <!-- -- -->
+                    <div class="content-title">
+                        <h4 class="dn">Đăng nhập</h4>
+                        <a href=""><i class="ti-arrow-left icon-left"></i></a>
                     </div>
-                    <div class="app-block">
-                        
-                        <p><i class="icon-app ti-google"></i> Google</p>
+                    <!-- - -->
+
+                    <form action="" id="form-dangnhap">
+                        <div class="content-thongtin">
+                            <label class="subtitle" for="tai-khoan">Email</label>
+                            <input id="tai-khoan" required class="input-thongtin" type="email" >
+                        </div>
+                        <div class="content-thongtin">
+                            <label class="subtitle" for="mat-khau">Mật khẩu</label>
+                            <input id="mat-khau" required class="input-thongtin" type="password" >
+                        </div>
+                        <div class="content-suport">
+                        <a class="suport_link" href="">Quên mật khẩu?</a>
+                        <a class="suport_link" href="">Đăng nhập bằng OTP</a>
+                    </div>
+                    <button id="js-btn" class="btn-dangnhap">Đăng nhập</button>
+                    </form>
+                    <!-- -- -->
+                    
+                    <div class="content-hr">
+                        <hr class="the-hr">
+                        <p class="min-title">Hoặc</p>
+                    </div>
+                    <div class="content-app">
+                        <div class="app-block">
+                            
+                            <p><i class="icon-app ti-facebook"></i> Facebook</p>
+                        </div>
+                        <div class="app-block">
+                            
+                            <p><i class="icon-app ti-google"></i> Google</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        <!-- end content -->
 
 
 
@@ -110,7 +117,26 @@
 
     
 
+    <script>
+        const anNut =document.getElementById('js-btn');
+        anNut.addEventListener('click',function(){
+            const taiKhoan =document.getElementById('tai-khoan').value;
+            const matKhau =document.getElementById('mat-khau').value;
+            if((taiKhoan === ''||matKhau==='')){
+                alert('bạn không được bỏ trống thông tin')
+                return;
+            }
+            if(matKhau.length>=6){
+                alert('Chúc mừng bạn đã đăng nhập thành công !!')
+                return;
+            }
+            else{
+                alert('Không được nhập mật khẩu dưới 6 ký tự')
+                return;
+            }
 
+        })
+    </script>
 
 
 

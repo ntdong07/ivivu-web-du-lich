@@ -419,11 +419,27 @@ background-color: #fff3e0;
     background-color: #fff;
     padding: 16px;
 }
+
 .khoi-trang h4{
+    
     margin-bottom: 13px;
     font-size:19px;
     color:var(--maunnen);
     line-height:1.6;
+}
+/* Fix card có link bao ngoài */
+.khoi-trang a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.khoi-trang a h4 {
+    color: var(--maunnen);
+}
+
+.khoi-trang a:hover h4 {
+    color: var(--mauxanh);
 }
 .desc .nav li{
     

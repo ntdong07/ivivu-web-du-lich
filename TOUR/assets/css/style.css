@@ -76,7 +76,37 @@ html{
 }
 
 /* ---------------------------------------------------------------------------------------------- */
+/* Fix thẻ tour có link bao ngoài */
+.box-chung a {
+    text-decoration: none;
+    
+}
 
+.box-chung a h4 {
+    color: #3f3b3b;
+    font-size: 18px;
+    
+}
+
+.box-chung a:hover h4 {
+    color: var(--mauxanh);
+}
+
+.box-chung a .pvitri {
+    color: #828282;
+}
+
+.box-chung a .diadiem li {
+    color: #3f3b3b;
+}
+
+.box-chung a .box-tien h3 {
+    color: var(--mauvang);
+}
+
+.box-chung a .ngaydi {
+    color: #828282;
+}
 /* main */
 #main{
     
