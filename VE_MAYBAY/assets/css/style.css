@@ -87,7 +87,7 @@ html{
 #father-header{
     background-color:var(--maunnen);
     width:100%;
-    position:relative;
+    position:fixed;
     z-index: 1;
 }
 #header{
@@ -253,7 +253,8 @@ ul.nav{
 /*---------------------------------------end   account --------------------------------------------*/
 /* end header */
 /* begin slider */
-#father-slider{    
+#father-slider{
+    padding-top: 64px;    
     position:relative;
     background:url('/VE_MAYBAY/assets/img/slider/VJA_banner_top_Giamden20hangDeluxe\,Skyboss\,Business-Datvetunayden30-04-2026_2_.webp') no-repeat center / cover;
     height:500px;  

@@ -103,7 +103,7 @@ html {
 #father-header {
     background-color: var(--maunnen);
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 1;
 }
 
@@ -296,6 +296,7 @@ ul.nav {
 
 /* ================= SLIDER VÉ TÀU ================= */
 .slider-vetau {
+    padding-top: 64px;
     background: url('/VE_TAU/assets/img/slider/slider.png') no-repeat center top / cover;
     height: 420px;
     position: relative;

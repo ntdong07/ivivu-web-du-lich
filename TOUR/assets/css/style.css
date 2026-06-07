@@ -115,9 +115,10 @@ html{
 
 /* begin header */
 #father-header{
+    position:fixed;
     background-color:var(--maunnen);
     width:100%;
-    position:relative;
+    
     z-index: 1;
 }
 #header{
@@ -283,7 +284,8 @@ ul.nav{
 /*---------------------------------------end   account --------------------------------------------*/
 /* end header */
 /* begin slider */
-#father-slider{    
+#father-slider{   
+    padding-top: 64px; 
     position:relative;
     background:url('/TOUR/assets/img/slider/slider.png') no-repeat center / cover;
     height:500px;  

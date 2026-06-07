@@ -90,7 +90,7 @@ html{
 #father-header{
     background-color:var(--maunnen);
     width:100%;
-    position:relative;
+    position:fixed;
     z-index: 1;
 }
 #header{
@@ -259,6 +259,7 @@ ul.nav{
 /* end header */
 /* begin slider */
 #father-slider{    
+    padding-top: 64px;
     position:relative;
     background:url('/VE_VUICHOI/assets/img/slider/=utf-8BQmFubmVyIFRvcCBWw6kgVnVpIGNoxqFpNCAoMTkyMHg1MTMpICgxKS5wbmdfMC5wbmc==_.webp') no-repeat center / cover;
     height:500px;  

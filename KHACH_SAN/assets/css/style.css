@@ -79,9 +79,10 @@ html{
 
 /* begin header */
 #father-header{
+    position:fixed;
     background-color:var(--maunnen);
     width:100%;
-    position:relative;
+    
     z-index: 1;
 }
 #header{
@@ -257,6 +258,7 @@ ul.nav{
 
 /* begin slider */
 #father-slider{    
+    padding-top: 64px;
     position:relative;
     background:url('/KHACH_SAN/assets/img/slider/slider.webp') no-repeat center / cover;
     height:500px;  
